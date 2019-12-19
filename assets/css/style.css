@@ -1,0 +1,406 @@
+body, html{
+  min-width: 750px;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#navBar{  /* Navigation Bar */
+  overflow: hidden; /* hide wich is exceed when page is reduce */
+  background-color: #333333;
+  position: fixed;  /*position fixed on page */
+  top: 0; /*top of the page */
+  height: 40px;
+  width: 100%; /* bar take all the width */
+  text-align: center; /*center of the block */
+  min-width: 750px;   /* make the navBar stop rezised itself when user minimizes the page*/
+  font-family: monospace; /* change thefont */
+  z-index: 5;
+}
+#navBar li{
+  list-style-type: none; /* drop the typo list style */
+  display: inline;  /* put the list horizontal */
+  z-index: 2;
+}
+#navBar ul{
+  margin-top: 10px; /* put a space between the top of the page and the start of the text */
+}
+#navBar a{
+  display: inline; /* put the link in horizontal */
+  left: auto;
+  right: auto;  /* center the text */
+  color: #f2f2f2;
+  padding: 14px 16px; /* h:14 w:16 */
+  margin-top: 10px;
+  text-decoration: none;  /* drop the typo link style */
+}
+#navBar a:hover{ /* when the pointer is on */
+  cursor: pointer;
+  background:#dddddd;
+  color: black;
+  height: 40px;
+}
+.topButton{
+  display: flex; /* make a flexible utem */
+  position: fixed; /* fixe on the screen, not in the page */
+  bottom: 70px;
+  right: 30px;
+  z-index: 10;  /* place on z axe */
+  border: 1px solid black;
+  text-decoration: none;
+  background-color: #172b30;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 12;
+}
+.topButton:hover{
+  background-color: #939393;
+}
+.parallax1 , .parallax2{  /* background fixe scrolling effect */
+  position: absolute; /* put the background in position relative from parent block */
+  background-attachment: fixed; /* background doesn't moove whan page is scrolling */
+  background-position: center;
+  background-repeat: no-repeat; /* drop the mozaique effect */
+  background-size: cover; /* all the place is covered */
+}
+.parallax1{ /* image de fond #1 */
+  background-image: url("../img/mountain41dark.jpg");
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.parallax2{ /* image de fond #1 */
+  background-image: url("../img/mountain3.jpg");
+  height: 70%;
+  width: 100%;
+  z-index: -1;
+}
+.resume h1{ /* titre du cv banniere */
+  position: absolute;
+  display: flex;
+  padding-top: 120px;
+  padding-left: 60%;
+  padding-right: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  font-family:'Roboto Slab';
+  color: white;
+}
+.resume h2{ /* description consise introductive du cv */
+  position: absolute;
+  margin-top: 220px;
+  padding-left: 60%;
+  padding-right: 150px;
+  font-size: 20px;
+  text-align: left;
+  font-family:inherit;
+  font-weight: normal;
+  color: white;
+}
+.resume img{ /* photo de profil */
+  display: inline;
+  position: relative;
+  z-index: 0;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-bottom: -1%;
+  margin-right: auto;
+  width: 400px;
+  height: auto;
+  opacity: 0.8;
+}
+.menu1{ /* setion #1 en forme de bandereau conteneur de sous-categories */
+  position: relative;
+  height: 650px;
+  background-color: #f2f2f2;
+  opacity: 1;
+  font-size: 32;
+  box-shadow: 0px 5px 15px #2a2a2a;
+  z-index: 2;
+  border: 1px solid blue;
+}
+.contenerMenu1{
+  float: left;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 50px;
+  height: 490px;
+  width: 1360px;
+  padding-left: auto;
+}
+.contenerLeft:hover, .contenerRight:hover, .contenerLeftDown:hover{
+  box-shadow: 2px 2px 2px grey;
+}
+.contenerLeft{
+  position: relative;
+  float: left;
+  margin-left: 0;
+  margin-right: 20px;
+  height: 300px;
+  width: 550px;
+  box-shadow: 5px 8px 16px grey;
+}
+.lineLeft{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 240px;
+  position: absolute;
+  left: 17px;
+  top: 38px;
+  border-radius: 0 0 2px 2px;
+}
+.contenerLeft h2{
+  margin-left: 50px;
+  margin-top: 10px;
+  text-align: left;
+  color: black;
+  font-family:'Anton';
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+}
+.contenerLeft p{
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 10px;
+  text-align: left;
+  color: black;
+  font-family:'Oswald';
+  font-weight: normal;
+  text-align: left;
+  font-size: 18px;
+}
+.contenerLeft span{
+  font-weight: bold;
+  color: #3C8F79;
+}
+.contenerLeft img{
+  position: absolute;
+  height: 30px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.contenerLeftDown{ /* Reseaux sociaux */
+  position: relative;
+  float: left;
+  margin-top: 30px;
+  margin-left: 0;
+  margin-right: 20px;
+  height: 150px;
+  width: 650px;
+  box-shadow: 5px 8px 16px grey;
+}
+.contenerLeftDown img.icon{
+  position: absolute;
+  height: 30px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.lineLeftDown{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 90px;
+  position: absolute;
+  left: 17px;
+  top: 38px;
+  border-radius: 0 0 2px 2px;
+}
+.contenerLeftDown h2{
+  margin-left: 50px;
+  margin-top: 10px;
+  text-align: left;
+  color: black;
+  font-family:'Anton';
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+}
+.contenerLeftDown img.githubIcon{
+  position: absolute;
+  height: 70px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.contenerLeftDown p.githubText{
+  position: absolute;
+  margin-left: 110px;
+  margin-top: 30px;
+  text-align: left;
+  color: black;
+  font-family:Oswald;
+  font-weight: normal;
+  text-align: left;
+  font-size: 20px;
+}
+.contenerLeft span.linkGithub{
+  display: block;
+  text-decoration: none;
+}
+.contenerLeftDown span.compteur{
+  border-radius: 7px;
+  background-image: linear-gradient(to bottom right, #0059c6, #0072ff);
+  padding: 4px;
+  width: 8px;
+  height: 4px;
+  color: White;
+  border: 1px solid white;
+}
+.contenerRight{
+  position: relative;
+  float: left;
+  margin-right: 0;
+  float: right;
+  height: 480px;
+  width: 650px;
+  /*border: 2px solid red;*/
+  box-shadow: 5px 8px 16px grey;
+}
+.lineRight{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 420px;
+  position: absolute;
+  left: 17px;
+  top: 25px;
+  border-radius: 0 0 2px 2px;
+}
+.contenerRight h2{
+  margin-left: 50px;
+  margin-top: 10px;
+  text-align: left;
+  color: black;
+  font-family:Anton;
+  font-weight: bold;
+  text-align: left;
+  font-size: 22px;
+}
+.contenerRight li{
+  margin-left: 60px;
+  margin-top: 25px;
+  text-align: left;
+  color: black;
+  font-family:Oswald;
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+}
+.contenerRight h3{
+  margin-left: 60px;
+  margin-top: 10px;
+  text-align: left;
+  color: #1b8976;
+  font-family:Oswald;
+  font-weight: normal;
+  text-align: left;
+  font-size: 20px;
+}
+.contenerRight p{
+  margin-left: 60px;
+  text-align: left;
+  color: black;
+  font-family:Oswald;
+  font-weight: normal;
+  font-size: 20px;
+}
+.contenerRight span.diploma{
+  font-style: italic;
+}
+.contenerRight span.school{
+  font-weight:normal;
+  color: #1b8976;
+}
+.contenerRight img{
+  position: absolute;
+  height: 40px;
+  width: auto;
+  margin-top: 6px;
+}
+.menu2{
+  position: relative;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  width: 80%;
+  background-color: #f2f2f2;
+  opacity: 1;
+  box-shadow: 0px 5px 5px #2a2a2a;
+  z-index: 1;
+  border: 2px solid transparent;
+}
+.menu2 img.codeIcon{
+  position: absolute;
+  height: 40px;
+  width: auto;
+  margin-top:15px;
+  margin-left: 15px;
+}
+.lineDown{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 230px;
+  position: absolute;
+  left: 33px;
+  top: 60px;
+  border-radius: 0 0 2px 2px;
+}
+.menu2 h2{
+  margin-left: 70px;
+  margin-top: 20px;
+  text-align: left;
+  color: black;
+  font-family:Anton;
+  font-weight: bold;
+  text-align: left;
+  font-size: 22px;
+}
+.container {
+  width: 25%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  margin-left: 70px;
+  margin-top: 10px;
+}
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 5px;
+  padding-right: 10px;/* Add bottom padding */
+  color: white; /* White text color */
+}
+.html{ /* Charging barre */
+  width: 75%;
+  background-color: #4CAF50;
+}
+.css{ /* Charging barre */
+  width: 60%;
+  background-color: #2196F3;
+}
+.menu2 p.codeTypehtml{
+  margin-left: 70px;
+  margin-top: 0px;
+  margin-top: 20px;
+  text-align: left;
+  color: black;
+  font-family:Oswald;
+  font-weight: normal;
+  font-size: 20px;
+}
+.menu2 p.codeTypeCss{
+  margin-left: 70px;
+  margin-top: 20px;
+  text-align: left;
+  color: black;
+  font-family:Oswald;
+  font-weight: normal;
+  font-size: 20px;
+}

@@ -1,0 +1,151 @@
+body, html{
+  overflow-x:hidden;
+  font-family:'Roboto';
+  min-height: 100vh;
+  font-size: 18px;
+  min-height: 100vh;
+}
+/* style by balise */
+a{ outline: none; }
+p{ font-size: 1rem; }
+/* end */
+/* style by class */
+.italic{ font-style: italic;}
+.semiBold{ font-weight: bolder;}
+/* end */
+.parallax{  /* background fixe scrolling effect */
+  position: absolute; /* put the background in position relative from parent block */
+  background-attachment: fixed; /* background doesn't moove whan page is scrolling */
+  background-position: center;
+  background-repeat: no-repeat; /* drop the mozaique effect */
+  background-size: cover; /* all the place is covered */
+  background-image: url("../img/mountain41dark.jpg");
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.me{
+  max-height: 350px;
+  min-height: 220px;
+  min-width: 165px;
+  margin-left: 0;
+  z-index: 5;
+}
+.myName{
+  color: white;
+  font-family:'Roboto Slab';
+  font-weight: bold;
+}
+.about span{
+  text-align: left;
+  font-weight: bold;
+  color: #3C8F79;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.passageLine{
+  height: 50px;
+}
+#mountainLine{
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  border: 1px solid blue;
+}
+.menuContainerFluid{
+  background-color: white;
+}
+.menu1{
+  background-color: white;
+  padding: 2%;
+}
+.lineLeft{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 240px;
+  position: absolute;
+  left: 17px;
+  top: 38px;
+  border-radius: 0 0 2px 2px;
+}
+.menu1 img{
+  position: absolute;
+  height: 30px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+.menu1 h3{
+  text-align: left;
+  color: black;
+  font-family:'Anton';
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.about > p{
+  margin-left: 5px;
+}
+.menu1 h4{
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  color: #3C8F79;
+}
+.menu1 h5{
+  text-align: left;
+  color: black;
+  font-weight: normal;
+  font-size: 18px;
+}
+.menu1 li{
+  font-style: italic;
+}
+.resume{
+  color: white;
+  font-family:'Roboto Slab';
+  font-weight: normal;
+}
+/* Media queries */
+@media(max-width:680px){
+  .me{
+    margin-left: -60%;
+  }
+}
+@media(max-width:1200px){
+  .myName{
+    font-size: 1.6rem;
+  }
+}
+@media(max-width:780px){
+  .myName{
+    font-size: 1.4rem;
+  }
+}
+@media(max-width:500px){
+  .myName{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width:1200px){
+  .resume{
+    font-size: 1.4rem;
+  }
+}
+@media(max-width:780px){
+  .resume{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width:500px){
+  .resume{
+    font-size: 1rem;
+  }
+}
+@media(max-width: 420px){
+  .resume, .myName{
+    margin-left: 10%;
+  }
+}
